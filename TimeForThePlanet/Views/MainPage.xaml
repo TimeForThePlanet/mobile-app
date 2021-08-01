@@ -15,7 +15,13 @@
         <Image HeightRequest="200"
                Source="time.png" />
 
-        <Button Text="Galaxie" VerticalOptions="StartAndExpand" Clicked="Button_OnClicked"/>
+        <Button Text="Galaxie" 
+                VerticalOptions="StartAndExpand" 
+                Command="{Binding GoToGalaxyOfActionCommand}"/>
+
+        <Button Text="Devenir actionnaire" 
+                VerticalOptions="StartAndExpand" 
+                Command="{Binding GoToBecomeActionnaryCommand}"/>
     </StackLayout>
 </ContentPage>
 
