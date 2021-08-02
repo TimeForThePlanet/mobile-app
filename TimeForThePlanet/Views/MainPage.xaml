@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:TimeForThePlanet.ViewModels;assembly=TimeForThePlanet"
+             xmlns:resources="clr-namespace:TimeForThePlanet.Resources;assembly=TimeForThePlanet"
              x:Class="TimeForThePlanet.Views.MainPage"
              x:DataType="viewModels:MainPageViewModel"
              NavigationPage.HasNavigationBar="False">
     <StackLayout Padding="16">
-        <Label Text="Bienvenue dans l'application Time For The planet" 
+        <Label Text="{Static resources:Resources.Welcome}" 
                FontSize="40" 
                HorizontalTextAlignment="Center" 
                HorizontalOptions="Center" 
@@ -15,11 +16,11 @@
         <Image HeightRequest="200"
                Source="time.png" />
 
-        <Button Text="Galaxie" 
+        <Button Text="{Static resources:Resources.Galaxy}" 
                 VerticalOptions="StartAndExpand" 
                 Command="{Binding GoToGalaxyOfActionCommand}"/>
 
-        <Button Text="Devenir actionnaire" 
+        <Button Text="{Static resources:Resources.BecomeActionnary}" 
                 VerticalOptions="StartAndExpand" 
                 Command="{Binding GoToBecomeActionnaryCommand}"/>
     </StackLayout>
