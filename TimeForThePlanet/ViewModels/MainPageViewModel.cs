@@ -8,11 +8,13 @@ namespace TimeForThePlanet.ViewModels
     {
         public ICommand GoToGalaxyOfActionCommand { get; }
         public ICommand GoToBecomeActionnaryCommand { get; }
+        public ICommand GoToMaketimeGrowUpCommand { get; }
 
         public MainPageViewModel()
         {
             GoToGalaxyOfActionCommand = new Command(GoToGalaxyOfAction);
             GoToBecomeActionnaryCommand = new Command(GoToBecomeActionnary);
+            GoToMaketimeGrowUpCommand = new Command(GoToMaketimeGrowUp);
         }
 
         private void GoToGalaxyOfAction()
@@ -24,6 +26,12 @@ namespace TimeForThePlanet.ViewModels
         private void GoToBecomeActionnary()
         {
             var page = new BecomeActionnaryPage();
+            Application.Current.MainPage.Navigation.PushAsync(page);
+        }
+
+        private void GoToMaketimeGrowUp()
+        {
+            var page = new GalaxyOfAction();
             Application.Current.MainPage.Navigation.PushAsync(page);
         }
     }

@@ -6,23 +6,68 @@
              x:Class="TimeForThePlanet.Views.MainPage"
              x:DataType="viewModels:MainPageViewModel"
              NavigationPage.HasNavigationBar="False">
-    <StackLayout Padding="16">
-        <Label Text="{Static resources:Resources.Welcome}" 
-               FontSize="40" 
-               HorizontalTextAlignment="Center" 
-               HorizontalOptions="Center" 
-               VerticalOptions="CenterAndExpand"/>
+    <ScrollView Padding="31" BackgroundColor="Black">
+        <StackLayout Spacing="20">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image WidthRequest="35" HeightRequest="35" Source="time.png"/>
 
-        <Image HeightRequest="200"
-               Source="time.png" />
+                <Label Text="Time for the planet" 
+                       TextColor="White" 
+                       FontFamily="Gilroy" 
+                       FontSize="14" 
+                       VerticalTextAlignment="Center"/>
+            </StackLayout>
 
-        <Button Text="{Static resources:Resources.Galaxy}" 
-                VerticalOptions="StartAndExpand" 
-                Command="{Binding GoToGalaxyOfActionCommand}"/>
+            <Grid>
+                <Image Source="superman.jpg" Aspect="AspectFill" HeightRequest="359"/>
+                <BoxView Color="#AF0096A2"/>
+                <Label Text="Faire grandir l'aventure en 30 secondes 🚀"
+                       VerticalOptions="EndAndExpand"
+                       TextColor="White" 
+                       FontSize="34" 
+                       FontAttributes="Bold" 
+                       HorizontalTextAlignment="Start"
+                       FontFamily="Poppins"
+                       Margin="16"/>
 
-        <Button Text="{Static resources:Resources.BecomeActionnary}" 
-                VerticalOptions="StartAndExpand" 
-                Command="{Binding GoToBecomeActionnaryCommand}"/>
-    </StackLayout>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToMaketimeGrowUpCommand}"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+
+            <Grid>
+                <Image Source="hourglass.jpg" Aspect="AspectFill" HeightRequest="359"/>
+                <BoxView Color="#AF0096A2"/>
+                <Label Text="Time en live 🔴"
+                       VerticalOptions="EndAndExpand"
+                       TextColor="White" 
+                       FontSize="34" 
+                       FontAttributes="Bold" 
+                       HorizontalTextAlignment="Start"
+                       FontFamily="Poppins"
+                       Margin="16"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToGalaxyOfActionCommand}"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+
+            <Grid>
+                <Image Source="planet.jpg" HeightRequest="359"/>
+                <BoxView Color="#AF0096A2"/>
+                <Label Text="Devenir associé 🤝"
+                       VerticalOptions="EndAndExpand"
+                       TextColor="White" 
+                       FontSize="30" 
+                       FontAttributes="Bold" 
+                       HorizontalTextAlignment="Start"
+                       FontFamily="Poppins"
+                       Margin="16"/>
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToBecomeActionnaryCommand}"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
 
