@@ -1,6 +1,4 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
@@ -24,11 +22,17 @@ namespace TimeForThePlanet.Droid
                 .UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize);
             LoadApplication(app);
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        public void GoToGalaxy()
+        {
+            StartActivity(typeof(GalaxyOfActionActivity));
         }
     }
 }

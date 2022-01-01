@@ -1,4 +1,4 @@
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using TimeForThePlanet.Views;
 using Xamarin.Forms;
 
@@ -19,8 +19,8 @@ namespace TimeForThePlanet.ViewModels
 
         private void GoToGalaxyOfAction()
         {
-            var page = new GalaxyOfAction();
-            Application.Current.MainPage.Navigation.PushAsync(page);
+            var service = DependencyService.Get<IActivityHelper>();
+            service.GoToGalaxy();
         }
 
         private void GoToBecomeActionnary()
