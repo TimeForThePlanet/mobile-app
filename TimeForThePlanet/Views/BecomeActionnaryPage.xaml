@@ -5,7 +5,7 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <WebView HeightRequest="1000" WidthRequest="1000" Source="https://automate-me.typeform.com/to/ykenkf"/>
+            <WebView HeightRequest="1000" WidthRequest="1000" Source="https://www.time-planet.com/fr/"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
