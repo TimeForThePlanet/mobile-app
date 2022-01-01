@@ -1,4 +1,4 @@
-﻿using System.Windows.Input;
+using System.Windows.Input;
 using TimeForThePlanet.Views;
 using Xamarin.Forms;
 
@@ -31,7 +31,7 @@ namespace TimeForThePlanet.ViewModels
 
         private void GoToMaketimeGrowUp()
         {
-            var page = new GalaxyOfAction();
+            var page = new MakeTimeGrowPage();
             Application.Current.MainPage.Navigation.PushAsync(page);
         }
     }
