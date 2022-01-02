@@ -6,7 +6,7 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace TimeForThePlanet.Droid
 {
-    [Activity(Label = "TimeForThePlanet", Icon = "@mipmap/time", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
+    [Activity(Icon = "@mipmap/time", Theme = "@style/MainTheme", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
