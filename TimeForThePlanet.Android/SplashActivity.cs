@@ -9,6 +9,7 @@ namespace TimeForThePlanet.Droid
         Icon = "@mipmap/time",
         Theme = "@style/MainTheme",
         MainLauncher = true,
+        NoHistory = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
     public class SplashActivity : Activity
     {
