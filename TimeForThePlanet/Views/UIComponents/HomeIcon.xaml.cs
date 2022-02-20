@@ -5,7 +5,7 @@ using Xamarin.Forms.Xaml;
 namespace TimeForThePlanet.Views.Components
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomeIcon : Grid
+    public partial class HomeIcon : Frame
     {
         public HomeIcon()
         {

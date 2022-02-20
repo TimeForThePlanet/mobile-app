@@ -19,22 +19,17 @@
             </StackLayout>
 
             <components:HomeIcon 
-                ImageSrc="superman.jpg" 
-                Text="Faire grandir l'aventure en 30 secondes 🚀" 
-                TappedCommand="{Binding GoToMaketimeGrowUpCommand}"/>
-
-            <components:HomeIcon 
                 ImageSrc="hourglass.jpg" 
                 Text="Time en live 🔴" 
                 TappedCommand="{Binding GoToGalaxyOfActionCommand}"/>
 
             <Grid>
-                <Image Source="planet.jpg" HeightRequest="359"/>
+                <Image Source="planet.jpg" HeightRequest="140"/>
                 <BoxView Color="#AF0096A2" CornerRadius="5"/>
                 <Label Text="Devenir associé 🤝"
                            VerticalOptions="EndAndExpand"
                            TextColor="White" 
-                           FontSize="30" 
+                           FontSize="17" 
                            FontAttributes="Bold" 
                            HorizontalTextAlignment="Start"
                            FontFamily="PoppinsBlack"
@@ -44,6 +39,11 @@
                     <TapGestureRecognizer Command="{Binding GoToBecomeActionnaryCommand}"/>
                 </Grid.GestureRecognizers>
             </Grid>
+
+            <components:HomeIcon 
+                ImageSrc="superman.jpg" 
+                Text="Faire grandir l'aventure en 30 secondes 🚀" 
+                TappedCommand="{Binding GoToMaketimeGrowUpCommand}"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

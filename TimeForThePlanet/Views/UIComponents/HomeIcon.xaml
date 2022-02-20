@@ -1,25 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Grid 
-        xmlns="http://xamarin.com/schemas/2014/forms" 
-        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        x:Class="TimeForThePlanet.Views.Components.HomeIcon"
-        x:Name="Self">
-    <Image Source="{Binding Source={x:Reference Self}, Path=ImageSrc}" 
+<Frame xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="TimeForThePlanet.Views.Components.HomeIcon"
+       x:Name="Self"
+       CornerRadius="5"
+       Padding="0"
+       Margin="0">
+    <Grid>
+        <Image Source="{Binding Source={x:Reference Self}, Path=ImageSrc}" 
                Aspect="AspectFill" 
-               HeightRequest="359"/>
+               HeightRequest="140"/>
 
-    <BoxView Color="#AF0096A2" CornerRadius="5" />
+        <BoxView Color="#AF0096A2"/>
 
-    <Label Text="{Binding Source={x:Reference Self}, Path=Text}"
+        <Label Text="{Binding Source={x:Reference Self}, Path=Text}"
                VerticalOptions="EndAndExpand"
                TextColor="White" 
-               FontSize="34" 
+               FontSize="17" 
                FontAttributes="Bold" 
                HorizontalTextAlignment="Start"
                FontFamily="PoppinsBlack"
                Margin="18"/>
 
-    <Grid.GestureRecognizers>
-        <TapGestureRecognizer Command="{Binding Source={x:Reference Self}, Path=TappedCommand}"/>
-    </Grid.GestureRecognizers>
-</Grid>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding Source={x:Reference Self}, Path=TappedCommand}"/>
+        </Grid.GestureRecognizers>
+    </Grid>
+</Frame>
